@@ -12,6 +12,7 @@ public class Count_Occurences_of_Anagrams {
         // code here
         int n=txt.length();
         int k=pat.length();
+        //create a frequency array and update the frequency of every character
         int[] temp=new int[26];
         for(char ch:pat.toCharArray()){
             temp[ch-'a']++;
@@ -20,9 +21,11 @@ public class Count_Occurences_of_Anagrams {
         while(j<n){
             temp[txt.charAt(j)-'a']--;
             if(j-i+1==k){
+                //update the count when you found an anagram
                 if(allZero(temp)){
                     count++;
                 }
+                //shrink the window
                 temp[txt.charAt(i)-'a']++;
                 i++;
             }
