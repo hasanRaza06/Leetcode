@@ -1,6 +1,6 @@
 package DailyCode;
 import java.util.*;
-public class String_Matching_in_an_Array {
+public class String_Matching_in_an_Array_7_January_2025 {
     public List<String> stringMatching(String[] words) {
         int n=words.length;
         List<String> ans=new ArrayList<>();
